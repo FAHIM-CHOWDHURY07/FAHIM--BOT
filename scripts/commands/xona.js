@@ -2,7 +2,7 @@ module.exports.config = {
   name: "xona",
   version: "1.0.0", 
   permission: 0,
-  credits: "ALVI",
+  credits: "Fahim",
   description: "", 
   prefix: true,
   category: "user",
@@ -18,7 +18,7 @@ module.exports.run = async({api,event,args,client,Users,Threads,__GLOBAL,Currenc
 const axios = global.nodemodule["axios"];
 const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
-   var hi = ["╭──────•◈•───────╮\n      🄰🅁🅈🄰🄽🅁🄾🄱🄾🅃          \n___হুট করে যাদের লিচু বড় হয়  তারা \n\n___আসলে মেয়ে  না মহিলা..!🍊🍎🙂\n╰──────•◈•───────╯"
+   var hi = ["╭──────•◈•───────╮\n      🄵🄰🄷🄸🄼🅁🄾🄱🄾🅃          \n___হুট করে যাদের লিচু বড় হয়  তারা \n\n___আসলে মেয়ে  না মহিলা..!🍊🍎🙂\n╰──────•◈•───────╯"
  ];
   var know = hi[Math.floor(Math.random() * hi.length)];
     var link = [
