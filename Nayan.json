@@ -6,7 +6,7 @@
   "notification": true,
   "approval": false,
   "BOTNAME": "☞︎︎︎✍︎ 𝙵 𝙰 𝙷 𝙸 𝙼 ✿︎𝙱☺︎︎𝚃 ♕︎",
-  "PREFIX": "-",
+  "PREFIX": "/",
   "OPERATOR": [
     "100029901980367"
   ],
