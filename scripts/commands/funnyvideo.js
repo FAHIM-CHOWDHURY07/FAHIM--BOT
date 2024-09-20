@@ -2,7 +2,7 @@ module.exports.config = {
   name: "funny", 
   version: "1.0.0", 
   permission: 0,
-  credits: "Aryan",
+  credits: "FAHIM",
   description: "Random funny video",
   prefix: true,
   category: "Media", 
@@ -20,7 +20,7 @@ module.exports.run = async ({ api, event, args, client, Users, Threads, __GLOBAL
   const request = global.nodemodule["request"];
   const fs = global.nodemodule["fs-extra"];
   
-  var hi = ["🍒 𝗔𝗥𝗬𝗔𝗡  🍒"];
+  var hi = ["𝗙𝗔𝗛𝗜𝗠 𝗖𝗛𝗢𝗪𝗗𝗛𝗨𝗥𝗬"];
   var know = hi[Math.floor(Math.random() * hi.length)];
   var link = [
     "https://drive.google.com/uc?id=1Zg6YCrfLNFVPuIarV3ZBvyg9NW9vKf-i",
