@@ -3,7 +3,7 @@ module.exports.config = {
   name: "ripley1",
   version: "2.0.1",
   permission: 0,
-  credits: "𝖠𝖱𝖸𝖠𝖭",
+  credits: "Fahim",
   description: "noprefix",
   prefix: false,
   category: "user",
@@ -48,7 +48,7 @@ react.includes("SawYa") ||
 react.includes("Sawya") || 
 react.includes("tor mare xudi") || react.includes("vuda") || react.includes("heda") || react.includes("bap")) {
 		var msg = {
-				body: " ❒ এখানে গালাগালি করলে মুখ সেলাই কইরা দিমু..!!😾"
+				body: "━━━━━━━━━━━━━━━━━━━━\n╭┈ ❒ 💬 | 𝐌𝐄𝐒𝐒𝐄𝐆𝐄:\n╰┈➤ এখানে গালাগালি করলে মুখ সেলাই কইরা দিমু..!!😾\n━━━━━━━━━━━━━━━━━━━━━━\n✿◕𝐁𝐎𝐓-𝐎𝐖𝐍𝐄𝐑: 𝐅𝐀𝐇𝐈𝐌 𝐂𝐇𝐎𝐖𝐃𝐇𝐔𝐑𝐘◕✿🌚!!😾"
 			}
 			api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🤬", event.messageID, (err) => {}, true)
@@ -57,3 +57,4 @@ react.includes("tor mare xudi") || react.includes("vuda") || react.includes("hed
 	module.exports.run = function({ api, event, client, __GLOBAL }) {
 
   } 
+	   
