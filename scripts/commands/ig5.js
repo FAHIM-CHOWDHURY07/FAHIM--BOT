@@ -3,7 +3,7 @@ module.exports.config = {
   name: "ig",
   version: "1.0.0", 
   permission: 0,
-  credits: "ALVI",
+  credits: "Fahim",
   description: "", 
   prefix: true,
   category: "user",
@@ -19,7 +19,7 @@ module.exports.run = async({api,event,args,client,Users,Threads,__GLOBAL,Currenc
 const axios = global.nodemodule["axios"];
 const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
-   var hi = ["❊ 𝗔𝗥𝗬𝗔𝗡 𝗖𝗛𝗢𝗪𝗗𝗛𝗨𝗥𝗬 ❊"
+   var hi = ["❊ 𝗙𝗔𝗛𝗜𝗠 𝗖𝗛𝗢𝗪𝗗𝗛𝗨𝗥𝗬 ❊"
  ];
   var know = hi[Math.floor(Math.random() * hi.length)];
     var link = [
