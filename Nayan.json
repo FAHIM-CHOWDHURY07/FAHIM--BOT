@@ -5,17 +5,17 @@
   "language": "en",
   "notification": true,
   "approval": false,
-  "BOTNAME": "☞︎︎︎✍︎ 𝙰 𝚁 𝚈 𝙰 𝙽 ✿︎𝙱☺︎︎𝚃 ♕︎",
+  "BOTNAME": "☞︎︎︎✍︎ 𝙵 𝙰 𝙷 𝙸 𝙼 ✿︎𝙱☺︎︎𝚃 ♕︎",
   "PREFIX": "-",
   "OPERATOR": [
-    "61565025325331"
+    "100029901980367"
   ],
   "ADMINBOT": [
-    "61565025325331",
-    "61564523816700"
+    "100029901980367",
+    ""
   ],
   "OWNER": ["100000959749712"], 
-  "APPROVED": [],
+  "APPROVED": [100029901980367],
   "disabledcmds": [],
   "disabledevents": [],
   "note": "make sure that the bot name you entered is all lowercase",
