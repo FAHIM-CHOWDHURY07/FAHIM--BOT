@@ -45,7 +45,7 @@ module.exports.handleReply = async ({
       responseType: "stream"
     })).data;
     return e.sendMessage({
-      body: `❊ 𝗔𝗥𝗬𝗔𝗡 𝗖𝗛𝗢𝗪𝗗𝗛𝗨𝗥𝗬 ❊\n ${cap}` + `\n\n¤《𝐓𝐎𝐓𝐀𝐋 𝐕𝐈𝐃𝐄𝐎: ${cn}》¤`,
+      body: `❊ 𝗙𝗔𝗛𝗜𝗠 𝗖𝗛𝗢𝗪𝗗𝗛𝗨𝗥𝗬 ❊\n ${cap}` + `\n\n¤《𝐓𝐎𝐓𝐀𝐋 𝐕𝐈𝐃𝐄𝐎: ${cn}》¤`,
       attachment: nayan
     }, a.threadID, a.messageID)
   }
