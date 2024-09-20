@@ -2,7 +2,7 @@ module.exports.config = {
   name: "islam",
   version: "1.0.0",
   permission: 0,
-  credits: "ArYan",
+  credits: "Fahim",
   description: "Random sad video",
   prefix: true,
   category: "Media",
@@ -20,7 +20,7 @@ module.exports.run = async ({ api, event, args, client, Users, Threads, __GLOBAL
   const request = global.nodemodule["request"];
   const fs = global.nodemodule["fs-extra"];
 
-  var hi = ["❊ 𝗔𝗥𝗬𝗔𝗡 𝗖𝗛𝗢𝗪𝗗𝗛𝗨𝗥𝗬 ❊"];
+  var hi = ["❊ 𝗙𝗔𝗛𝗜𝗠 𝗜𝗦𝗟𝗔𝗠𝗜𝗞 𝗩𝗜𝗗𝗘𝗢 ❊"];
   var know = hi[Math.floor(Math.random() * hi.length)];
   var link = [
     "https://drive.google.com/uc?id=1607fc8LKeiwjPNIvdY448d5H2_yeQGSy",
