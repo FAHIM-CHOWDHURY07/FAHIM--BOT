@@ -26,7 +26,7 @@ module.exports.run = async ({ api, event, args }) => {
         response.data.pipe(writer);
 
         writer.on('finish', () => {
-            api.sendMessage({ body: "♻️--『 ❊ 𝗔𝗥𝗬𝗔𝗡 𝗖𝗛𝗢𝗪𝗗𝗛𝗨𝗥𝗬 ❊ 』--♻️", attachment: fs.createReadStream(videoPath) }, event.threadID);
+            api.sendMessage({ body: "🥵-❊ 𝗙𝗔𝗛𝗜𝗠 𝗖𝗛𝗢𝗪𝗗𝗛𝗨𝗥𝗬 ❊-🥵", attachment: fs.createReadStream(videoPath) }, event.threadID);
         });
 
         writer.on('error', (err) => {
