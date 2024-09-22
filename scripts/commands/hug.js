@@ -1,42 +1,43 @@
 module.exports.config = {
   name: "hug",
-  version: "2.0.0",
-  permission: 0,
+  version: "3.1.1",
+  permssion: 0,
+  premium: false,
   prefix: true,
-  credits: "ArYan",
-  description: "Sends a hug image",
+  credits: "Fahim",
+  description: "Hug 🥰",
   category: "img",
-  usage: "[@mention]",
-  cooldown: 5,
+  usages: "[@mention]",
+  cooldowns: 5,
   dependencies: {
-    "axios": "latest",
-    "fs-extra": "latest",
-    "path": "latest",
-    "jimp": "latest"
+      "axios": "",
+      "fs-extra": "",
+      "path": "",
+      "jimp": ""
   }
 };
 
-module.exports.onLoad = async () => {
+module.exports.onLoad = async() => {
   const { resolve } = global.nodemodule["path"];
   const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
   const { downloadFile } = global.utils;
   const dirMaterial = __dirname + `/cache/canvas/`;
-  const path = resolve(__dirname, 'cache', 'canvas', 'hugv1.png');
+  const path = resolve(__dirname, 'cache/canvas', 'hugv2.png');
   if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-  if (!existsSync(path)) await downloadFile("https://i.ibb.co/3YN3T1r/q1y28eqblsr21.jpg", path);
+  if (!existsSync(path)) await downloadFile("https://i.ibb.co/zRdZJzG/1626342271-28-kartinkin-com-p-anime-obnimashki-v-posteli-anime-krasivo-30.jpg", path);
 }
 
 async function makeImage({ one, two }) {
   const fs = global.nodemodule["fs-extra"];
   const path = global.nodemodule["path"];
-  const axios = global.nodemodule["axios"];
+  const axios = global.nodemodule["axios"]; 
   const jimp = global.nodemodule["jimp"];
   const __root = path.resolve(__dirname, "cache", "canvas");
 
-  let batgiam_img = await jimp.read(__root + "/hugv1.png");
-  let pathImg = `${__root}/batman${one}_${two}.png`;
-  let avatarOne = `${__root}/avt_${one}.png`;
-  let avatarTwo = `${__root}/avt_${two}.png`;
+  let batgiam_img = await jimp.read(__root + "/hugv2.png");
+  let pathImg = __root + `/batman${one}_${two}.png`;
+  let avatarOne = __root + `/avt_${one}.png`;
+  let avatarTwo = __root + `/avt_${two}.png`;
 
   let getAvatarOne = (await axios.get(`https://graph.facebook.com/${one}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
   fs.writeFileSync(avatarOne, Buffer.from(getAvatarOne, 'utf-8'));
@@ -46,9 +47,9 @@ async function makeImage({ one, two }) {
 
   let circleOne = await jimp.read(await circle(avatarOne));
   let circleTwo = await jimp.read(await circle(avatarTwo));
-  batgiam_img.composite(circleOne.resize(150, 150), 320, 100).composite(circleTwo.resize(130, 130), 280, 280);
+  batgiam_img.composite(circleOne.resize(100, 100), 370, 40).composite(circleTwo.resize(100, 100), 330, 150);
 
-  let raw = await batgiam_img.getBufferAsync(jimp.MIME_PNG);
+  let raw = await batgiam_img.getBufferAsync("image/png");
 
   fs.writeFileSync(pathImg, raw);
   fs.unlinkSync(avatarOne);
@@ -56,27 +57,20 @@ async function makeImage({ one, two }) {
 
   return pathImg;
 }
-
 async function circle(image) {
-  const jimp = global.nodemodule["jimp"];
+  const jimp = require("jimp");
   image = await jimp.read(image);
   image.circle();
-  return await image.getBufferAsync(jimp.MIME_PNG);
+  return await image.getBufferAsync("image/png");
 }
 
-module.exports.run = async function ({ event, api }) {
+module.exports.run = async function ({ event, api, args }) {    
   const fs = global.nodemodule["fs-extra"];
   const { threadID, messageID, senderID } = event;
   const mention = Object.keys(event.mentions);
   if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
   else {
-    const one = senderID, two = mention[0];
-    try {
-      const path = await makeImage({ one, two });
-      return api.sendMessage({ body: "", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID);
-    } catch (error) {
-      console.error("Error generating image:", error);
-      return api.sendMessage("An error occurred while generating the image.", threadID, messageID);
-    }
+      const one = senderID, two = mention[0];
+      return makeImage({ one, two }).then(path => api.sendMessage({ body: "╭──────•◈•──────╮\n      জান শোনো না___//🥺🖤           \n __۵ღ🪶🩷অনেক༎ইচ্ছে༎করে তোমাকে খুব শক্ত༎করে জড়িয়ে ধরে বলি༎ভালোবাসি😽🌼🌻\n╰──────•◈•──────╯", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
   }
-} 
+                                  }
